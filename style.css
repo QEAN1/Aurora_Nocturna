@@ -146,13 +146,13 @@ li {
   display: flex;
 }
 
-/* 🔥 ВОТ ГЛАВНОЕ ИСПРАВЛЕНИЕ */
+/* 🔥 */
 .modal-content {
   width: 95vw;
   height: 95vh;
   object-fit: contain;
+  border-radius: 12px;
 }
-
 /* Крестик */
 .close {
   position: absolute;
