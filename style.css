@@ -11,6 +11,7 @@ body {
   padding: 0;
 }
 
+/* ===== NAV ===== */
 nav {
   display: flex;
   justify-content: center;
@@ -35,9 +36,9 @@ nav a {
 
 nav a:hover {
   background-color: #a30000;
-  color: white;
 }
 
+/* ===== HERO ===== */
 .hero {
   max-width: 1000px;
   margin: 40px auto;
@@ -48,8 +49,6 @@ nav a:hover {
     url("https://cdn.akamai.steamstatic.com/steam/apps/761890/header.jpg");
   background-size: cover;
   background-position: center;
-  box-shadow: 0 0 35px rgba(255, 0, 0, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .hero-overlay {
@@ -58,256 +57,108 @@ nav a:hover {
 
 .hero h2 {
   color: #d4af37;
-  letter-spacing: 4px;
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.title {
-  color: #ffffff;
-  font-size: clamp(30px, 7vw, 60px);
-  text-transform: uppercase;
-  margin: 10px 0;
-  line-height: 1.1;
-  word-break: break-word;
-  animation: fadeSlide 1.2s ease forwards;
-  opacity: 0;
-  text-shadow: 0 0 15px rgba(255, 0, 0, 0.35);
-}
-
-.title span {
-  color: #ff3b3b;
-  text-shadow: 0 0 10px red, 0 0 25px rgba(255, 0, 0, 0.6);
-}
-
-.title:hover {
-  text-shadow: 0 0 20px red, 0 0 40px rgba(255, 0, 0, 0.8);
-}
-
-.title:active {
-  animation: flash 0.4s ease;
-  color: #ff1a1a;
-}
-
-@keyframes fadeSlide {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-    letter-spacing: 5px;
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-    letter-spacing: 2px;
-  }
-}
-
-@keyframes flash {
-  0% {
-    text-shadow: 0 0 0 red;
-    transform: scale(1);
-  }
-  50% {
-    text-shadow: 0 0 25px red, 0 0 50px rgba(255, 0, 0, 0.9);
-    transform: scale(1.1);
-  }
-  100% {
-    text-shadow: 0 0 10px red;
-    transform: scale(1);
-  }
 }
 
 .hero p {
   color: #dddddd;
-  max-width: 700px;
-  margin: 20px auto;
-  font-size: 18px;
-  line-height: 1.5;
 }
 
+/* ===== TITLE ===== */
+.title {
+  font-size: 50px;
+}
+
+.title span {
+  color: red;
+}
+
+/* ===== BUTTON ===== */
 .join-btn {
-  color: white;
-  background: linear-gradient(to right, #8b0000, #c00000);
-  padding: 14px 30px;
-  border-radius: 12px;
+  background: red;
+  padding: 12px 25px;
+  border-radius: 10px;
   text-decoration: none;
-  display: inline-block;
-  margin-top: 15px;
-  transition: 0.3s;
-  font-weight: bold;
-  box-shadow: 0 0 18px rgba(255, 0, 0, 0.28);
+  color: white;
 }
 
-.join-btn:hover {
-  background: linear-gradient(to right, #d4af37, #f0d36b);
-  color: black;
-  transform: scale(1.06);
-}
-
-h2 {
-  color: #d4af37;
-  margin-top: 50px;
-  scroll-margin-top: 80px;
-}
-
+/* ===== CARDS ===== */
 .cards {
   display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
-  margin: 25px auto 0;
-  max-width: 1000px;
 }
 
 .card {
-  background: linear-gradient(to bottom, #161616, #0f0f0f);
-  padding: 22px;
-  border-radius: 14px;
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
   width: 220px;
-  box-shadow: 0 0 18px rgba(255, 0, 0, 0.08);
-  border: 1px solid rgba(255, 0, 0, 0.12);
-  transition: 0.3s;
 }
 
 .card h3 {
-  color: #ff4d4d;
-  margin-top: 0;
+  color: red;
 }
 
-.card p {
-  color: #cfcfcf;
-  margin-top: 10px;
-}
-
-.card:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 0 25px rgba(255, 0, 0, 0.18);
-}
-
-.requirements {
+/* ===== LIST ===== */
+ul {
   list-style: none;
   padding: 0;
-  margin: 25px auto 0;
-  max-width: 700px;
 }
 
-.requirements li {
-  background: linear-gradient(to right, #151515, #101010);
-  margin: 10px auto;
-  padding: 14px 16px;
-  border-radius: 10px;
-  width: 85%;
-  text-align: left;
-  border-left: 4px solid #a30000;
-  color: #dddddd;
-  box-shadow: 0 0 16px rgba(255, 0, 0, 0.08);
+li {
+  background: #111;
+  margin: 10px;
+  padding: 10px;
 }
 
+/* ===== LOOT ===== */
 .loot-gallery {
   display: flex;
   justify-content: center;
   gap: 15px;
   flex-wrap: wrap;
-  margin: 25px auto 0;
-  max-width: 1000px;
 }
 
 .loot-gallery img {
   width: 220px;
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.08);
-  transition: 0.3s;
+  border-radius: 10px;
   cursor: pointer;
-  object-fit: cover;
+  transition: 0.3s;
 }
+
 .loot-gallery img:hover {
-  transform: scale(1.04);
-  box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+  transform: scale(1.05);
 }
 
-footer {
-  margin-top: 50px;
-  padding: 20px;
-}
-
-footer p {
-  color: #888888;
-  margin: 0;
-}
-
-.fade-in {
-  opacity: 0;
-  transform: translateY(35px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.fade-in.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-body.shake {
-  animation: screenShake 0.25s ease;
-}
-
-@keyframes screenShake {
-  0% { transform: translate(0, 0); }
-  20% { transform: translate(-4px, 2px); }
-  40% { transform: translate(4px, -2px); }
-  60% { transform: translate(-3px, 1px); }
-  80% { transform: translate(3px, -1px); }
-  100% { transform: translate(0, 0); }
-}
-
-.flash {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 0, 0, 0.15);
-  pointer-events: none;
-  animation: flashScreen 0.25s ease;
-  z-index: 9999;
-}
-
-@keyframes flashScreen {
-  0% { opacity: 0; }
-  50% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
+/* ===== MODAL (ВАЖНО) ===== */
 .modal {
   display: none;
   position: fixed;
-  z-index: 10000;
   inset: 0;
   background: rgba(0, 0, 0, 0.95);
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  z-index: 9999;
 }
 
 .modal.show-modal {
   display: flex;
 }
 
+/* 🔥 ВОТ ГЛАВНОЕ ИСПРАВЛЕНИЕ */
 .modal-content {
-  width: 96vw;
-  height: 96vh;
+  width: 95vw;
+  height: 95vh;
   object-fit: contain;
-  border-radius: 12px;
-  box-shadow: 0 0 25px rgba(255, 0, 0, 0.25);
 }
 
-
+/* Крестик */
 .close {
   position: absolute;
-  top: 15px;
-  right: 25px;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
   color: white;
-  font-size: 42px;
-  font-weight: bold;
   cursor: pointer;
 }
