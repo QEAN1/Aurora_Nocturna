@@ -63,25 +63,29 @@ if (title) {
   });
 }
 
-// ===== УВЕЛИЧЕНИЕ КАРТИНОК =====
-
+/* Открытие картинок на весь экран */
 const modal = document.getElementById("imageModal");
 const modalImg = document.getElementById("modalImg");
 const closeBtn = document.querySelector(".close");
+const galleryImages = document.querySelectorAll(".loot-img");
 
-const images = document.querySelectorAll(".loot-gallery img");
-
-images.forEach(img => {
+galleryImages.forEach((img) => {
   img.addEventListener("click", () => {
     modal.style.display = "block";
     modalImg.src = img.src;
   });
 });
 
-closeBtn.onclick = () => {
-  modal.style.display = "none";
-};
+if (closeBtn) {
+  closeBtn.onclick = () => {
+    modal.style.display = "none";
+  };
+}
 
-modal.onclick = () => {
-  modal.style.display = "none";
-};
+if (modal) {
+  modal.onclick = (e) => {
+    if (e.target === modal || e.target === modalImg) {
+      modal.style.display = "none";
+    }
+  };
+}
