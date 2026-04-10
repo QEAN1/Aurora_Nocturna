@@ -89,3 +89,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+console.log("NEW JS LOADED");
