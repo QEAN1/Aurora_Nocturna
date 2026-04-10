@@ -13,8 +13,6 @@ const observer = new IntersectionObserver(
 
 fadeElements.forEach((el) => observer.observe(el));
 
-// ===== УДАР =====
-
 const title = document.querySelector(".title");
 
 function playHitSound() {
@@ -41,14 +39,12 @@ function playHitSound() {
   osc.stop(audioCtx.currentTime + 0.5);
 }
 
-// тряска
 function shakeScreen() {
   document.body.classList.remove("shake");
   void document.body.offsetWidth;
   document.body.classList.add("shake");
 }
 
-// вспышка
 function flashScreen() {
   const flash = document.createElement("div");
   flash.classList.add("flash");
