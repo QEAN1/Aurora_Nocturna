@@ -103,6 +103,7 @@ h2 {
   margin: 25px auto 0;
   max-width: 1000px;
 }
+
 .card {
   background: linear-gradient(to bottom, #161616, #0f0f0f);
   padding: 22px;
@@ -225,7 +226,7 @@ footer p {
     transform: translateY(0);
     letter-spacing: 2px;
   }
-
+}
 
 .title:hover {
   text-shadow: 0 0 20px red, 0 0 40px rgba(255, 0, 0, 0.8);
