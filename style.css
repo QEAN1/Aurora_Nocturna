@@ -11,7 +11,6 @@ body {
   padding: 0;
 }
 
-/* Меню */
 nav {
   display: flex;
   justify-content: center;
@@ -39,7 +38,6 @@ nav a:hover {
   color: white;
 }
 
-/* Верхний блок */
 .hero {
   max-width: 1000px;
   margin: 40px auto;
@@ -65,15 +63,6 @@ nav a:hover {
   margin-bottom: 10px;
 }
 
-.hero p {
-  color: #dddddd;
-  max-width: 700px;
-  margin: 20px auto;
-  font-size: 18px;
-  line-height: 1.5;
-}
-
-/* Название */
 .title {
   color: #ffffff;
   font-size: clamp(30px, 7vw, 60px);
@@ -115,7 +104,7 @@ nav a:hover {
 
 @keyframes flash {
   0% {
-    text-shadow: 0 0 0px red;
+    text-shadow: 0 0 0 red;
     transform: scale(1);
   }
   50% {
@@ -128,7 +117,14 @@ nav a:hover {
   }
 }
 
-/* Кнопка */
+.hero p {
+  color: #dddddd;
+  max-width: 700px;
+  margin: 20px auto;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
 .join-btn {
   color: white;
   background: linear-gradient(to right, #8b0000, #c00000);
@@ -154,7 +150,6 @@ h2 {
   scroll-margin-top: 80px;
 }
 
-/* Карточки */
 .cards {
   display: flex;
   justify-content: center;
@@ -189,7 +184,6 @@ h2 {
   box-shadow: 0 0 25px rgba(255, 0, 0, 0.18);
 }
 
-/* Требования */
 .requirements {
   list-style: none;
   padding: 0;
@@ -209,7 +203,6 @@ h2 {
   box-shadow: 0 0 16px rgba(255, 0, 0, 0.08);
 }
 
-/* Лут */
 .loot-gallery {
   display: flex;
   justify-content: center;
@@ -218,6 +211,7 @@ h2 {
   margin: 25px auto 0;
   max-width: 1000px;
 }
+
 .loot-gallery img {
   width: 220px;
   border-radius: 12px;
@@ -227,13 +221,11 @@ h2 {
   cursor: pointer;
   object-fit: cover;
 }
-
 .loot-gallery img:hover {
   transform: scale(1.04);
   box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
 }
 
-/* Подвал */
 footer {
   margin-top: 50px;
   padding: 20px;
@@ -244,7 +236,6 @@ footer p {
   margin: 0;
 }
 
-/* Появление при прокрутке */
 .fade-in {
   opacity: 0;
   transform: translateY(35px);
@@ -256,7 +247,6 @@ footer p {
   transform: translateY(0);
 }
 
-/* Тряска экрана */
 body.shake {
   animation: screenShake 0.25s ease;
 }
@@ -270,7 +260,6 @@ body.shake {
   100% { transform: translate(0, 0); }
 }
 
-/* Вспышка */
 .flash {
   position: fixed;
   top: 0;
@@ -289,24 +278,24 @@ body.shake {
   100% { opacity: 0; }
 }
 
-/* Полный экран для картинки */
 .modal {
   display: none;
   position: fixed;
   z-index: 10000;
-  padding-top: 40px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.92);
+  inset: 0;
+  background: rgba(0, 0, 0, 0.95);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal.show-modal {
+  display: flex;
 }
 
 .modal-content {
-  margin: auto;
-  display: block;
-  max-width: 92%;
-  max-height: 85%;
+  max-width: 95%;
+  max-height: 90%;
   border-radius: 12px;
   box-shadow: 0 0 25px rgba(255, 0, 0, 0.25);
 }
@@ -314,9 +303,9 @@ body.shake {
 .close {
   position: absolute;
   top: 15px;
-  right: 30px;
+  right: 25px;
   color: white;
-  font-size: 40px;
+  font-size: 42px;
   font-weight: bold;
   cursor: pointer;
 }
